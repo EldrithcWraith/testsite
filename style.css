@@ -1,0 +1,153 @@
+#container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #1a1a1a;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#darkModeButton {
+    position: fixed;
+    top: -10px;
+    left: 10px;
+    z-index: 999;
+    font-size: 16px; /* Adjust the font size as needed */
+    padding: 10px 15px; /* Adjust the padding as needed */
+}
+
+/* Default styles for larger screens */
+#chart {
+    display: inline-block;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+}
+
+#question {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: calc(100% - 220px); /* Adjust the size as needed */
+    padding-left: 20px; /* Adjust the spacing as needed */
+}
+
+#question h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Add margin for better separation */
+}
+
+#question h2 {
+    color: #3366cc;
+    font-size: 32px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Adjust the spacing as needed */
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    #container {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -12%;
+    }
+    #question h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px; /* Add margin for better separation */
+        position: relative;
+        left: 15%;
+    }
+    
+    #question h2 {
+        color: #3366cc;
+        font-size: 32px;
+        position: relative;
+        left: 15%;
+        text-decoration: underline;
+    }
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+    :root {
+        --background-color-light: #ffffff;
+        --background-color-dark: #1a1a1a;
+        --text-color-light: #000000;
+        --text-color-dark: #ffffff;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+        transition: background-color 0.5s, color 0.5s;
+    }
+    
+    #darkModeButton {
+        position: fixed;
+        top: -10px;
+        left: 10px;
+        z-index: 999;
+        font-size: 15px; /* Adjust the font size as needed */
+        padding: 10px 15px; /* Adjust the padding as needed */
+    }
+
+    #chart,
+    #question {
+        width: 120%; /* Adjust the size as needed */
+        height: auto; /* Adjust the size as needed */
+        display: block;
+        margin: 0 auto; /* Center on smaller screens */
+    }
+
+    #question {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    #question h1 {
+        font-size: 20px;
+        position: relative;
+        left: 0%;
+    }
+
+    #question h2 {
+        font-size: 28px;
+        position: relative;
+        left: 0%;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

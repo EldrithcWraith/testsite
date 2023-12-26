@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+
+body {
+  font-family: 'Rethink Sans', sans-serif;
+  transition: background-color 0.3s ease;
+  background-size: cover;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.mode-switch {
+  position: fixed;
+  top: 10px;
+  left: 10px; /* Change 'right' to 'left' and adjust the value */
+  cursor: pointer;
+}
+
+.mode-switch .toggle {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+
+.mode-switch .toggle:before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Move the toggle for dark mode */
+.dark-mode .mode-switch .toggle:before {
+  transform: translateX(20px);
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+h1 {
+  opacity: 1; /* Set initial opacity to 0 */
+  transition: opacity 0.5s ease; /* Transition the opacity property over 0.5 seconds */
+}
+
+h1.fade-in {
+  opacity: 1;
+}
+
+.hwrapper {
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cwrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.site-header {
+  margin-bottom: 40px;
+}
+
+.site-header__title {
+    text-align: center;
+    background: #757575;
+    padding: 5px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 28px;
+  }
+
+.cimage {
+    max-width: 500px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+.uimaget {
+    padding: 5px;
+    color: #000000;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+.site-header__title__light {
+      font-weight: 300;
+      color: #adadad;
+    }
+
+@media only screen and (max-width: 1200px){
+  body {
+    font-family: 'Raleway', sans-serif;
+    transition: background-color 0.3s ease;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Mode Switch Styles */
+  .mode-switch {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+  }
+  
+  .mode-switch .toggle {
+    opacity: 0.5;
+    display: inline-block;
+    width: 160px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+  }
+  
+  .mode-switch .toggle:before {
+    content: '';
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dark-mode .mode-switch .toggle:before {
+    transform: translateX(82px);
+  }
+
+  .site-header {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .site-header__title {
+    background: #757575;
+    padding: 5px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 12px;
+    margin: 20px 0;
+  }
+  
+  .cimage {
+    max-width: 500px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .uimaget {
+    padding: 5px;
+    color: #000000;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px;
+  }
+}
